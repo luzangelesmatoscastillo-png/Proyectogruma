@@ -2,33 +2,84 @@
 
 class Filosofia_model extends CI_Model{
 
-public function obtener_pilares(){
+    public function obtener_pilares(){
 
-$this->db->where('tipo','pilares');
-$this->db->where('activo',1);
-$this->db->order_by('orden','ASC');
+        $this->db->select('
+            filosofia.*,
+            cat_imagenes.url,
+            cat_imagenes.nombre_archivo
+        ');
 
-$query = $this->db->get('filosofia');
+        $this->db->from('filosofia');
 
-return $query->result();
+        $this->db->join(
+            'cat_imagenes',
+            'cat_imagenes.id = filosofia.id_imagen'
+        );
 
-}
+        $this->db->where('filosofia.tipo','pilares');
 
-public function obtener_valores(){
+        $this->db->where('filosofia.activo',1);
 
-$this->db->where('tipo','valores');
-$this->db->where('activo',1);
-$this->db->order_by('orden','ASC');
+        $this->db->order_by('filosofia.orden','ASC');
 
-$query = $this->db->get('filosofia');
+        $query = $this->db->get();
 
-return $query->result();
+        return $query->result();
+    }
 
-}
-public function buscar($q) {
-    $this->db->like('titulo', $q);
-    $this->db->or_like('descripcion', $q);
-    return $this->db->get('Filosofia')->result(); // Ajusta al nombre de tu tabla
-}
+    public function obtener_valores(){
+
+        $this->db->select('
+            filosofia.*,
+            cat_imagenes.url,
+            cat_imagenes.nombre_archivo
+        ');
+
+        $this->db->from('filosofia');
+
+        $this->db->join(
+            'cat_imagenes',
+            'cat_imagenes.id = filosofia.id_imagen'
+        );
+
+        $this->db->where('filosofia.tipo','valores');
+
+        $this->db->where('filosofia.activo',1);
+
+        $this->db->order_by('filosofia.orden','ASC');
+
+        $query = $this->db->get();
+
+        return $query->result();
+    }
+
+    public function buscar($q){
+
+        $this->db->select('
+            filosofia.*,
+            cat_imagenes.url,
+            cat_imagenes.nombre_archivo
+        ');
+
+        $this->db->from('filosofia');
+
+        $this->db->join(
+            'cat_imagenes',
+            'cat_imagenes.id = filosofia.id_imagen'
+        );
+
+        $this->db->group_start();
+
+            $this->db->like('filosofia.titulo', $q);
+
+            $this->db->or_like('filosofia.descripcion', $q);
+
+        $this->db->group_end();
+
+        $query = $this->db->get();
+
+        return $query->result();
+    }
 
 }

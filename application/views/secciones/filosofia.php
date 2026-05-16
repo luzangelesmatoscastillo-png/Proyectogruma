@@ -1,3 +1,6 @@
+
+<!-- NUEVO ESTILO PARA FILOSOFÍA Y VALORES -->
+<link rel="stylesheet" href="<?= base_url('assets/css/filosofia-valores-nuevo.css') ?>">
 <section class="filosofia">
 
     <div class="filosofia-header">
@@ -19,7 +22,7 @@
                 <h4><?= $p->titulo ?></h4>
 
                 <img 
-                    src="<?= base_url('assets/img/historia'.$p->imagen) ?>" 
+                    src="<?= base_url($p->url . $p->nombre_archivo) ?>"
                     alt="<?= $p->titulo ?>"
                     width="200"
                 >

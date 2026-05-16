@@ -1,3 +1,6 @@
+
+<!-- NUEVO ESTILO PARA FILOSOFÍA Y VALORES -->
+<link rel="stylesheet" href="<?= base_url('assets/css/filosofia-valores-nuevo.css') ?>">
 <section class="valores">
 
 <div class="valores-header">

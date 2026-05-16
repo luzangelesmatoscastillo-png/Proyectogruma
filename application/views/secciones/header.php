@@ -66,8 +66,8 @@
 </li>
 
 <!-- BOTON CARRITO -->
-<li class="<?= ($this->uri->segment(2) == 'alta_pedidos') ? 'activo' : '' ?>">
-    <a href="<?= base_url('productos/alta_pedidos') ?>" style="color: #FFD100; font-weight: bold;">
+<li class="<?= ($this->uri->segment(2) == 'carrito') ? 'activo' : '' ?>">
+    <a href="<?= base_url('productos/carrito') ?>" style="color: #FFD100; font-weight: bold;">
         <i class="fa-solid fa-cart-shopping"></i> Carrito
     </a>
 </li>
@@ -111,7 +111,7 @@
 
 <!-- CARRITO MENU LATERAL -->
 <li>
-    <a href="<?= base_url('productos/alta_pedidos') ?>">
+    <a href="<?= base_url('productos/carrito') ?>">
         <i class="fa-solid fa-cart-shopping"></i> Carrito
     </a>
 </li>

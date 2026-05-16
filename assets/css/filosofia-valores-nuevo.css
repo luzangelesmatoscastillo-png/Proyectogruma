@@ -1,0 +1,160 @@
+/* =========================
+   FILOSOFIA (MISION VISION OBJETIVO) - NUEVO ESTILO
+   ========================= */
+
+.filosofia {
+    background: var(--gris2);
+    padding: 40px 0 0 0;
+}
+
+.filosofia-header h2 {
+    color: var(--azul);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.filosofia-header h3 {
+    color: var(--verde);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.filosofia-header p {
+    color: var(--sub);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.filosofia-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.filosofia-card {
+    background: var(--blanco);
+    border: 2px solid var(--azul);
+    box-shadow: 0 8px 32px 0 rgba(0,48,135,0.10);
+    border-radius: 20px;
+    padding: 35px 25px 30px 25px;
+    width: 340px;
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s, border 0.3s;
+}
+
+.filosofia-card:hover {
+    border: 2px solid var(--amarillo);
+    box-shadow: 0 12px 36px 0 rgba(0,122,61,0.13);
+}
+
+.filosofia-card h4 {
+    color: var(--verde);
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+.filosofia-card p {
+    color: var(--texto);
+    font-size: 1.08rem;
+    margin-top: 10px;
+}
+
+.filosofia-card img {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 2px solid var(--amarillo);
+    background: var(--gris2);
+}
+
+/* =========================
+   VALORES - NUEVO ESTILO
+   ========================= */
+
+.valores {
+    background: var(--blanco);
+    padding: 40px 0 60px 0;
+}
+
+.valores-header .valores-tag {
+    color: var(--amarillo-osc);
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+.valores-header h2 {
+    color: var(--azul);
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.valores-frase {
+    color: var(--verde);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.valores-sub {
+    color: var(--sub);
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+}
+
+.valores-linea {
+    width: 80px;
+    height: 5px;
+    background: linear-gradient(90deg, var(--azul), var(--amarillo), var(--verde));
+    border-radius: 3px;
+    margin: 0 auto 30px auto;
+}
+
+.valores-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.valor-card {
+    background: var(--gris2);
+    border: 2px solid var(--amarillo);
+    border-radius: 18px;
+    padding: 30px 20px 25px 20px;
+    width: 300px;
+    min-height: 200px;
+    box-shadow: 0 6px 24px 0 rgba(0,122,61,0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s, border 0.3s;
+}
+
+.valor-card:hover {
+    border: 2px solid var(--azul);
+    box-shadow: 0 10px 32px 0 rgba(0,48,135,0.13);
+}
+
+.valor-card h4 {
+    color: var(--amarillo-osc);
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.valor-card p {
+    color: var(--texto);
+    font-size: 1.05rem;
+    margin-top: 8px;
+    text-align: center;
+}
