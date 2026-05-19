@@ -4,18 +4,12 @@ class Filosofia_model extends CI_Model{
 
     public function obtener_pilares(){
 
-        $this->db->select('
-            filosofia.*,
-            cat_imagenes.url,
-            cat_imagenes.nombre_archivo
-        ');
+        // Seleccionamos solo los campos de la tabla filosofia
+        $this->db->select('filosofia.*');
 
         $this->db->from('filosofia');
 
-        $this->db->join(
-            'cat_imagenes',
-            'cat_imagenes.id = filosofia.id_imagen'
-        );
+        // Se eliminó el JOIN a cat_imagenes para evitar el error de id_imagen
 
         $this->db->where('filosofia.tipo','pilares');
 
@@ -30,18 +24,12 @@ class Filosofia_model extends CI_Model{
 
     public function obtener_valores(){
 
-        $this->db->select('
-            filosofia.*,
-            cat_imagenes.url,
-            cat_imagenes.nombre_archivo
-        ');
+        // Seleccionamos solo los campos de la tabla filosofia
+        $this->db->select('filosofia.*');
 
         $this->db->from('filosofia');
 
-        $this->db->join(
-            'cat_imagenes',
-            'cat_imagenes.id = filosofia.id_imagen'
-        );
+        // Se eliminó el JOIN a cat_imagenes para evitar el error de id_imagen
 
         $this->db->where('filosofia.tipo','valores');
 
@@ -56,18 +44,12 @@ class Filosofia_model extends CI_Model{
 
     public function buscar($q){
 
-        $this->db->select('
-            filosofia.*,
-            cat_imagenes.url,
-            cat_imagenes.nombre_archivo
-        ');
+        // Seleccionamos solo los campos de la tabla filosofia
+        $this->db->select('filosofia.*');
 
         $this->db->from('filosofia');
 
-        $this->db->join(
-            'cat_imagenes',
-            'cat_imagenes.id = filosofia.id_imagen'
-        );
+        // Se eliminó el JOIN a cat_imagenes para evitar el error de id_imagen
 
         $this->db->group_start();
 
